@@ -38,14 +38,20 @@ public class WeatherSummary {
 
         //Sorted the list of weather values, print off the max/min
         Collections.sort(wList);
-        System.out.println(wList.get(0) + "\n" + wList.get(wList.size() - 1));
+        System.out.println("Minimum: " + wList.get(0) + "\n" + "Maximum: " + wList.get(wList.size() - 1));
         
-        //For testing
-        /*
+        //Calculate the average value
+        double val = 0;
+        double avg;
+        int counter = 0;
         for(Double x : wList)
         {
-            System.out.println(x);
+            val += x;
+            counter++;
         }
-        */
+        avg = val/counter;
+
+        //Print out the average temp
+        System.out.println("Average: " + avg);
     }
 }
