@@ -1,3 +1,7 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class WeatherSummary {
     /**
      * Reads newline-delimted temperatures from System.in and prints summary
@@ -18,5 +22,15 @@ public class WeatherSummary {
     public static void main(String[] args) {
         // Implement this method!
         // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
+        try
+        {
+            File myFile = new File("temps.txt");
+            Scanner scan = new Scanner(myFile);
+            System.out.print(scan.nextDouble());
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.print("File not found...");
+        }
     }
 }
