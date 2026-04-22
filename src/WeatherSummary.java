@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+//import java.io.File;
+//import java.io.FileNotFoundException;
 
 public class WeatherSummary {
     /**
@@ -22,15 +22,10 @@ public class WeatherSummary {
     public static void main(String[] args) {
         // Implement this method!
         // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
-        try
+        Scanner scan = new Scanner(System.in);
+        while(scan.hasNextDouble())
         {
-            File myFile = new File("temps.txt");
-            Scanner scan = new Scanner(myFile);
-            System.out.print(scan.nextDouble());
-        }
-        catch(FileNotFoundException e)
-        {
-            System.out.print("File not found...");
+            System.out.println(scan.nextDouble());
         }
     }
 }
